@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ẩm Thực Người Brao - Tây Nguyên</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            color: white;
+            margin-bottom: 60px;
+            padding: 40px 0;
+        }
+
+        header h1 {
+            font-size: 3.5em;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+            font-weight: bold;
+        }
+
+        header p {
+            font-size: 1.3em;
+            opacity: 0.95;
+            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+            line-height: 1.6;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+            text-decoration: none;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .card-image {
+            width: 100%;
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card-image::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.3);
+            transition: background 0.3s ease;
+        }
+
+        .card:hover .card-image::after {
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        .card-content {
+            padding: 30px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-content h3 {
+            font-size: 1.8em;
+            margin-bottom: 15px;
+            color: #667eea;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
+        }
+
+        .card-content p {
+            font-size: 1em;
+            line-height: 1.6;
+            color: #666;
+            margin-bottom: 20px;
+            flex-grow: 1;
+        }
+
+        .card-btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            text-align: center;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+            font-size: 1em;
+        }
+
+        .card-btn:hover {
+            background: linear-gradient(135deg, #764ba2, #667eea);
+            transform: scale(1.05);
+        }
+
+        footer {
+            text-align: center;
+            color: white;
+            padding: 30px 0;
+            border-top: 2px solid rgba(255, 255, 255, 0.3);
+            opacity: 0.9;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.5em;
+            }
+
+            header p {
+                font-size: 1.1em;
+            }
+
+            .grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .card-content {
+                padding: 20px;
+            }
+
+            .card-content h3 {
+                font-size: 1.5em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🍜 Ẩm Thực Người Brao 🍜</h1>
+            <p>Khám phá những món ăn truyền thống độc đáo tại Tây Nguyên</p>
+        </header>
+
+        <div class="grid">
+            <!-- Cơm Lam -->
+            <a href="comlam.html" class="card">
+                <div class="card-image" style="background-image: url('https://store.longphuong.vn/wp-content/uploads/2024/04/cach-lam-com-lam-18.jpg');"></div>
+                <div class="card-content">
+                    <h3>Cơm Lam</h3>
+                    <p>Gạo nếp nương nấu trong ống tre nướng trên than hồng, mang hương vị dẻo ngọt, thơm mùi tre tươi.</p>
+                    <button class="card-btn">Khám phá →</button>
+                </div>
+            </a>
+
+            <!-- Thịt Nướng Ống Tre -->
+            <a href="thitnuong.html" class="card">
+                <div class="card-image" style="background-image: url('https://media.vietnamplus.vn/images/7255a701687d11cb8c6bbc58a6c807857e79975a32971b450677122ea9c9ccb1dc74ed7b459d54b4d685fd5460b20800/thit_bo.jpg');"></div>
+                <div class="card-content">
+                    <h3>Thịt Nướng Ống Tre</h3>
+                    <p>Thịt heo đen ướp gia vị rừng, nhồi vào ống tre non, nướng trên than hồng tỏa mùi thơm đặc trưng.</p>
+                    <button class="card-btn">Khám phá →</button>
+                </div>
+            </a>
+
+            <!-- Canh Thụt -->
+            <a href="canhthut.html" class="card">
+                <div class="card-image" style="background-image: url('https://cdnv2.tgdd.vn/mwg-static/common/Common/canh-thut.jpg');"></div>
+                <div class="card-content">
+                    <h3>Canh Thụt</h3>
+                    <p>Đặc sản truyền thống với đọt mây, lá bép, ớt xiêm rừng, chế biến theo cách thụt độc đáo.</p>
+                    <button class="card-btn">Khám phá →</button>
+                </div>
+            </a>
+
+            <!-- Cá Suối Nướng -->
+            <a href="casuoi.html" class="card">
+                <div class="card-image" style="background-image: url('https://www.mekongfish.vn/uploaded/2022/10/ca-suoi-thac-ban-gioc-1.jpg');"></div>
+                <div class="card-content">
+                    <h3>Cá Suối Nướng</h3>
+                    <p>Cá suối tươi tẩm ướp gia vị rừng, nướng trong ống tre giữ trọn vị ngọt tự nhiên.</p>
+                    <button class="card-btn">Khám phá →</button>
+                </div>
+            </a>
+
+            <!-- Rượu Cần -->
+            <a href="ruoucan.html" class="card">
+                <div class="card-image" style="background-image: url('https://maichauhideaway.com/Data/Sites/1/News/353/ruou-can-muong-vang-6.jpg');"></div>
+                <div class="card-content">
+                    <h3>Rượu Cần</h3>
+                    <p>Di sản văn hóa đặc sắc được ủ từ hạt bo bo, men lá rừng, biểu tượng tinh thần cộng đồng.</p>
+                    <button class="card-btn">Khám phá →</button>
+                </div>
+            </a>
+        </div>
+
+        <footer>
+            <p>&copy; 2026 Ẩm Thực Người Brao - Tây Nguyên. Bảo tồn văn hóa ẩm thực truyền thống.</p>
+        </footer>
+    </div>
+</body>
+</html>

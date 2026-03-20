@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thịt Nướng Ống Tre - Đặc Sản Người Brao</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #e84393, #fd79a8);
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            text-align: center;
+            padding: 50px 0;
+            color: white;
+        }
+        header h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        .hero {
+            background: url('https://media.vietnamplus.vn/images/7255a701687d11cb8c6bbc58a6c807857e79975a32971b450677122ea9c9ccb1dc74ed7b459d54b4d685fd5460b20800/thit_bo.jpg') center/cover;
+            height: 700px;
+            border-radius: 15px;
+            margin-bottom: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            position: relative;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.4);
+            border-radius: 15px;
+        }
+        .content {
+            background: white;
+            border-radius: 15px;
+            padding: 40px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            margin-bottom: 40px;
+        }
+        .content h2 {
+            color: #e84393;
+            margin-bottom: 20px;
+            border-bottom: 3px solid #fd79a8;
+            padding-bottom: 10px;
+        }
+        .content p {
+            margin-bottom: 15px;
+            font-size: 1.1em;
+        }
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2em;
+            }
+            .content {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Thịt Nướng Ống Tre</h1>
+            <p>Đặc sản truyền thống của người Brao</p>
+        </header>
+        
+        <div class="hero"></div>
+        
+        <div class="content">
+            
+            <p>Thịt nướng ống tre của người Brao (Tây Nguyên) là món ăn độc đáo, thịt heo (thường là lợn đen) thái miếng ướp gia vị rừng, nhồi vào ống tre non, nút bằng lá chuối/lá dứa rồi nướng trên than hồng. Cách nướng này giữ thịt mềm ngọt, thơm hương tre, không bị ám khói, ăn cùng cơm lam rất hấp dẫn.</p>
+            
+            <h2>Nguyên liệu</h2>
+            <p>Thịt heo đen, gia vị (hành, tỏi, ớt, muối, hạt rừng...), ống tre non.</p>
+            
+            <h2>Chế biến</h2>
+            <p>Nhồi thịt vào ống tre, không quá chặt, nút đầu bằng lá, nướng trên than, trở đều tay cho đến khi ống tre chuyển vàng cháy xém.</p>
+            
+            <h2>Hương vị</h2>
+            <p>Thịt mềm, giữ được vị ngọt tự nhiên, thơm mùi tre tươi và gia vị đặc trưng.</p>
+            
+            <h2>Thưởng thức</h2>
+            <p>Thường ăn kèm cơm lam, rượu cần, đặc biệt ngon trong những ngày mưa lạnh.</p>
+        </div>
+    </div>
+</body>
+</html>

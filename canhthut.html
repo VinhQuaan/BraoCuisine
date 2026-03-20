@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canh Thụt - Đặc Sản Người Brao</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #00b894, #00cec9);
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            text-align: center;
+            padding: 50px 0;
+            color: white;
+        }
+        header h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        .hero {
+            background: url('https://cdnv2.tgdd.vn/mwg-static/common/Common/canh-thut.jpg') center/cover;
+            height: 400px;
+            border-radius: 15px;
+            margin-bottom: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            position: relative;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.4);
+            border-radius: 15px;
+        }
+        .content {
+            background: white;
+            border-radius: 15px;
+            padding: 40px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            margin-bottom: 40px;
+        }
+        .content h2 {
+            color: #00b894;
+            margin-bottom: 20px;
+            border-bottom: 3px solid #00cec9;
+            padding-bottom: 10px;
+        }
+        .content p {
+            margin-bottom: 15px;
+            font-size: 1.1em;
+        }
+        .back-btn {
+            display: inline-block;
+            background: #00b894;
+            color: white;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: background 0.3s;
+            margin-bottom: 20px;
+        }
+        .back-btn:hover {
+            background: #00cec9;
+        }
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2em;
+            }
+            .content {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Canh Thụt</h1>
+            <p>Đặc sản truyền thống của người Brao</p>
+        </header>
+        
+        <div class="hero"></div>
+        
+        <div class="content">
+            
+            <p>Món canh thụt là một đặc sản ẩm thực truyền thống mang đậm bản sắc của các dân tộc thiểu số vùng Tây Nguyên, đặc biệt phổ biến trong cộng đồng người M'nông, S'tiêng và cũng hiện diện trong đời sống của người Brao tại Kon Tum.</p>
+            
+            <h2>Tên gọi và Cách chế biến</h2>
+            <p>Tên gọi "canh thụt" xuất phát từ cách chế biến độc đáo: các nguyên liệu được cho vào ống tre (lồ ô) và dùng một thanh tre thụt liên tục cho đến khi nhuyễn nhừ.</p>
+            
+            <h2>Nguyên liệu tự nhiên</h2>
+            <p>Thành phần chính thường bao gồm đọt mây, lá nhíp (lá bép), cà đắng, ớt xiêm rừng, cùng các loại thịt hoặc cá suối, chim, sóc.</p>
+            
+            <h2>Cách chế biến</h2>
+            <p>Cho tất cả nguyên liệu vào ống tre tươi. Nướng ống tre trên bếp than hồng, vừa nướng vừa quay đều. Khi canh chín, dùng một chiếc que tre hoặc thanh nứa thụt vào trong ống để các nguyên liệu hòa quyện, nghiền nát vào nhau tạo thành một hỗn hợp sệt.</p>
+            
+            <h2>Hương vị</h2>
+            <p>Món ăn có sự kết hợp tinh tế giữa vị đắng thanh của đọt mây, vị ngọt bùi của lá nhíp, vị cay nồng của ớt rừng và mùi thơm đặc trưng của ống tre nướng.</p>
+            
+            <h2>Ý nghĩa</h2>
+            <p>Đây không chỉ là món ăn hằng ngày mà còn là món ăn trân quý thường dùng để đãi khách hoặc phục vụ trong các dịp lễ hội quan trọng của dân tộc.</p>
+        </div>
+    </div>
+</body>
+</html>
