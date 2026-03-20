@@ -12,66 +12,69 @@
         }
 
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             min-height: 100vh;
-            padding: 20px;
+            padding: 0;
             color: #333;
         }
 
         .container {
-            max-width: 1200px;
-            margin: 0 auto;
+            width: 100%;
+            padding: 0;
         }
 
         header {
             text-align: center;
             color: white;
-            margin-bottom: 60px;
-            padding: 40px 0;
+            padding: 40px 20px 30px;
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.95), rgba(118, 75, 162, 0.95));
         }
 
         header h1 {
-            font-size: 3.5em;
-            margin-bottom: 15px;
+            font-size: 2.5em;
+            margin-bottom: 10px;
             text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
             font-weight: bold;
         }
 
         header p {
-            font-size: 1.3em;
+            font-size: 1em;
             opacity: 0.95;
             text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
-            line-height: 1.6;
+            line-height: 1.5;
         }
 
         .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-bottom: 50px;
+            grid-template-columns: 1fr;
+            gap: 20px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
         }
 
         .card {
             background: white;
-            border-radius: 15px;
+            border-radius: 12px;
             overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
             transition: all 0.3s ease;
             text-decoration: none;
             color: #333;
             display: flex;
             flex-direction: column;
+            height: 100%;
         }
 
-        .card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        .card:active {
+            transform: scale(0.98);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
         }
 
         .card-image {
             width: 100%;
-            height: 200px;
+            height: 250px;
             background-size: cover;
             background-position: center;
             position: relative;
@@ -85,42 +88,43 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: rgba(0, 0, 0, 0.3);
+            background: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.3) 100%);
             transition: background 0.3s ease;
         }
 
-        .card:hover .card-image::after {
-            background: rgba(0, 0, 0, 0.5);
+        .card:active .card-image::after {
+            background: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.5) 100%);
         }
 
         .card-content {
-            padding: 30px;
+            padding: 20px;
             flex-grow: 1;
             display: flex;
             flex-direction: column;
         }
 
         .card-content h3 {
-            font-size: 1.8em;
-            margin-bottom: 15px;
+            font-size: 1.5em;
+            margin-bottom: 12px;
             color: #667eea;
             border-bottom: 3px solid #667eea;
             padding-bottom: 10px;
         }
 
         .card-content p {
-            font-size: 1em;
+            font-size: 0.95em;
             line-height: 1.6;
             color: #666;
-            margin-bottom: 20px;
+            margin-bottom: 16px;
             flex-grow: 1;
         }
 
         .card-btn {
-            display: inline-block;
+            display: block;
+            width: 100%;
             background: linear-gradient(135deg, #667eea, #764ba2);
             color: white;
-            padding: 12px 30px;
+            padding: 14px 20px;
             border-radius: 8px;
             text-decoration: none;
             transition: all 0.3s ease;
@@ -131,39 +135,66 @@
             font-size: 1em;
         }
 
-        .card-btn:hover {
+        .card-btn:active {
             background: linear-gradient(135deg, #764ba2, #667eea);
-            transform: scale(1.05);
+            transform: scale(0.97);
         }
 
         footer {
             text-align: center;
             color: white;
-            padding: 30px 0;
+            padding: 25px 20px;
             border-top: 2px solid rgba(255, 255, 255, 0.3);
             opacity: 0.9;
+            margin-top: 20px;
+            font-size: 0.9em;
         }
 
-        @media (max-width: 768px) {
+        @media (min-width: 768px) {
             header h1 {
-                font-size: 2.5em;
+                font-size: 3.5em;
             }
 
             header p {
-                font-size: 1.1em;
+                font-size: 1.3em;
             }
 
             .grid {
-                grid-template-columns: 1fr;
-                gap: 20px;
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                gap: 30px;
+                padding: 40px 20px;
             }
 
-            .card-content {
-                padding: 20px;
+            .card {
+                border-radius: 15px;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            }
+
+            .card:hover {
+                transform: translateY(-10px);
+                box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            }
+
+            .card-image {
+                height: 200px;
             }
 
             .card-content h3 {
-                font-size: 1.5em;
+                font-size: 1.8em;
+            }
+
+            .card-content p {
+                font-size: 1em;
+            }
+
+            .card-btn {
+                padding: 12px 30px;
+                font-size: 1em;
+            }
+
+            .card-btn:hover {
+                background: linear-gradient(135deg, #764ba2, #667eea);
+                transform: scale(1.05);
             }
         }
     </style>
@@ -171,7 +202,7 @@
 <body>
     <div class="container">
         <header>
-            <h1>🍜 Ẩm Thực Người Brao 🍜</h1>
+            <h1>🍜 ẨMTHỰC NGƯỜI BRAO 🍜</h1>
             <p>Khám phá những món ăn truyền thống độc đáo tại Tây Nguyên</p>
         </header>
 
@@ -228,7 +259,7 @@
         </div>
 
         <footer>
-            <p>&copy; 2026 Ẩm Thực Người Brao - Tây Nguyên. Bảo tồn văn hóa ẩm thực truyền thống.</p>
+            <p>&copy; 2026 Ẩm Thực Người Brao - Tây Nguyên | Bảo tồn văn hóa ẩm thực truyền thống</p>
         </footer>
     </div>
 </body>
